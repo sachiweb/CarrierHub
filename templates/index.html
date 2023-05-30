@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarrierHub</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}" /> {% endcomment %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="banner">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start your carrier journey with CarrierHub</p>
+        </div>
+        
+        <div class="green-bg">
+          <button type="button">Log in</button>
+        </div>
+        <form class="signup-form" method="post" action="{% url 'home'%}">
+          {% csrf_token %}
+          <h1>Create Account</h1>
+          <div class="social-media">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <p>or use your email for registration</p>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="uname" placeholder="Name" />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+         
+
+          <button type="submit">sign up</button>
+         <h1>have account</h1>
+         <a href="signin" class="btn btn-primary" id="button-search" style="color: green; font-size: 20px;">sign in</a>
+         
+        </form>
+        
+      </div>
+    </div>
+
+    <script src={% static "script.js" %}></script>
+  </body>
+</html>
+
+
+
+

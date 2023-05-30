@@ -1,0 +1,232 @@
+
+<head>
+    {% load static %}
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+  
+    <title>CarrierHub</title>
+  
+  
+  
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}" />
+    <!-- progress barstle -->
+    <link rel="stylesheet" href="{% static 'css-circular-prog-bar.css' %}">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- font wesome stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  
+  
+  
+  
+    <link rel="stylesheet" href="{% static 'scss-circular-prog-bar.css' %}">
+  
+  
+  </head>
+  
+  <body>
+    <div class="top_container sub_pages">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <img src="{% static 'logo.png' %}" alt="">
+              <span>
+                CarrierHub
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="app"> Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="about"> About </a>
+                  </li>
+  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="blog"> Blog </a>
+                  </li>
+  
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="vehicle.html"> vehicle </a>
+                  </li> -->
+  
+                  <li class="nav-item">
+                    <a class="nav-link" href="services">Services</a>
+                  </li>
+  
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+          </nav>
+        </div>
+      </header>
+  
+    </div>
+    <!-- end header section -->
+    <!-- about section -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog entries-->
+            <div class="col-lg-8">
+                <!-- Featured blog post-->
+
+
+                {% for f in featured_post %}
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{ f.thumbnail.url }}" alt="..." /></a>
+                    <div class="card-body">
+                        <div class="small text-muted">{{ f.created| date:"M d, Y" }}</div>
+                        <h2 class="card-title h4">{{ f.title }}</h2>
+                        <p class="card-text">{{ f.summary|truncatechars:100 }}</p>
+                        
+                    </div>
+                </div>
+
+                {% endfor %}
+
+
+                <!-- Nested row for non-featured blog posts-->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- Blog post-->
+
+
+                        {% for f in django_post %}
+                        <div class="card mb-4 h-50">
+                            <img class="card-img-top" src="{% static '{{ f.thumbnail.url }}' %}" alt="..."  height="340"/></a>
+                            <div class="card-body">
+                                <div class="small text-muted">{{ f.created| date:"M d, Y" }}</div>
+                                <h2 class="card-title h4">{{ f.title }}</h2>
+                                <p class="card-text">{{ f.summary|truncatechars:100 }}</p>
+                                
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <!-- Blog post-->
+                       
+                        {% for f in flask_post %}
+                        <div class="card mb-4 h-50">
+                            <img class="card-img-top" src="{{ f.thumbnail.url }}" alt="..." height="340" /></a>
+                            <div class="card-body">
+                                <div class="small text-muted">{{ f.created| date:"M d, Y" }}</div>
+                                <h2 class="card-title h4">{{ f.title }}</h2>
+                                <p class="card-text">{{ f.summary|truncatechars:100 }}</p>
+                                
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <!-- Pagination-->
+                <nav aria-label="Pagination pt-5">
+                    <hr class="my-0 mt-5" />
+                    <ul class="pagination justify-content-center my-4">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">15</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <!-- Search widget-->
+                <div class="card mb-4">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            
+                            <h3>Create your own blog</h3>
+                            <a href="add" class="btn btn-primary" id="button-search">Create →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Side Widget</div>
+                    <div class="card-body">Social media is now a critical part of the way people in most walks of life communicate and a key part of how work gets done — from corporations to government. Reflecting how important social media can be, the Department of Homeland Security is collecting social media profiles of potential immigrants as part of its evaluation process. 
+
+                        Social media allows you to do at least four important things: 
+                        
+                        Discover new ideas and trends.
+                        Connect with existing and new audiences in deeper ways
+                        Bring attention and traffic to your work.
+                        Build, craft and enhance your brand.  
+                        As social media has become more popular — an estimated 81 percent of Americans have a social media account — there are also more instances of people who have gotten in trouble for their social networking habits. The fact is that it’s impossible to separate the personal use of social from the professional, and everything you say online can and will be used against you. There are ways in which you can try to safeguard your privacy and control who sees particular content, but the onus is on you to be vigilant. So, the more seriously you can take your social media activities, the better.
+                        
+                        Social media changes all the time, so it’s important to keep up with the evolution of the platforms and to keep looking for ways to optimize your use of the available the tools. (Twitter and Snapchat, for example, recently announced major changes that are described below.)
+                        
+                        If you don’t work for yourself, be aware of company policies about the use of social media — more and more corporations are instituting or revising their policies.</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    {% comment %} <button type="submit" class="btn btn-primary">add →</button> {% endcomment %}
+  
+    <!-- about section -->
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <p>
+        Copyright &copy; 2023 All Rights Reserved By
+        <a href="https://html.design/">CarrierHub</a>
+      </p>
+    </section>
+    <!-- footer section -->
+  
+    <script type="text/javascript" src="{% static 'jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap.js' %}"></script>
+    <!-- progreesbar script -->
+  
+    </script>
+    <script type="text/javascript">
+      (function(d, m){
+          var kommunicateSettings = 
+              {"appId":"2215e1dbb8f44d94dc32030bd0338d907","popupWidget":true,"automaticChatOpenOnNavigation":true};
+          var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+          s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+          var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+          window.kommunicate = m; m._globals = kommunicateSettings;
+      })(document, window.kommunicate || {});
+  /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+  </script>
+
+  </body>
+  </html>
+

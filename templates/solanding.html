@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>CarrierHub</title>
+
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="{% static 'css-circular-prog-bar.css' %}">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'services.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'responsive.css' %}" rel="stylesheet" />
+
+
+
+
+  <link rel="stylesheet" href="{% static 'css-circular-prog-bar.css' %}">
+
+
+</head>
+
+<body>
+  <div class="top_container sub_pages">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'logo.png' %}" alt="">
+            <span>
+              CarrierHub
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/app"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/about"> About </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="/blog"> Blog </a>
+                </li>
+
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="vehicle.html"> vehicle </a>
+                </li> -->
+
+                <li class="nav-item">
+                  <a class="nav-link" href="/services">Services</a>
+                </li>
+
+              </ul>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+  </div>
+ <h1 style="text-align:center">Hackathons</h1>
+  <!-- end header section -->
+  <div>
+    <div class="carousel">
+      <ul class="slides">
+        <input type="radio" name="radio-buttons" id="img-1" checked />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2020/12/Hackathons-In-2020-A-Win-Win-Situation-For-Both-The-Employers-The-Job-Seekers.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-3" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-2" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-2" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://contentstatic.techgig.com/photo/75854344/a-complete-guide-to-conducting-a-successful-hackathon.jpg?180080">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-1" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-3" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <input type="radio" name="radio-buttons" id="img-3" />
+        <li class="slide-container">
+          <div class="slide-image">
+            <img src="https://images.wondershare.com/mockitt/hackathon/hackathon-event.jpg">
+          </div>
+          <div class="carousel-controls">
+            <label for="img-2" class="prev-slide">
+              <span>&lsaquo;</span>
+            </label>
+            <label for="img-1" class="next-slide">
+              <span>&rsaquo;</span>
+            </label>
+          </div>
+        </li>
+        <div class="carousel-dots">
+          <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+          <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+          <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <!-- about section -->
+
+<p style="font-size: xx-large; text-align: center; margin-top: 10px;">Start Your Coding Journey here</p>
+
+<div class="box-container" style="margin-top: 20px;">
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABGlBMVEUAAAD/////oRazs7O2tra5ubmFhYVHR0f/phf/oxb/pxf/nAD///1jPwn//Pf/ngC3dBDz8/PShRJxSAr1mxWQkJAjIyPX19ccHBw6Ojrh4eF4eHicnJzp6enx8fE2NjZOTk5iYmJILgbHfhHijxRdOwiDUwyIf3N6Tguoag9NMQfslRTcixODd2Y0IQVqQwm1rJ8RERFSSDorHAQZDgCcYw4kFwPNzc2Pj49tbW364cSsaACMWAf/69L/8eD/pyn/rD3/tFT/u2T/w3nZ0cb/y4z/0p3Kv6//3rihmo9xZlXakCeRZy5GPCxbSC4yKhzr4tackoNpaWnx6d+lmISLfmtcVk46NSxPQzE/NCBmSh8oIRSshVU9JwXul1z9AAAHEUlEQVR4nO2da1vaSBSASQBNomJAxLsgoBWhWC+wrUvVbru9uNvVrq176fr//8aGm8XMOZMLY2aS57wf+snwnPeZ65nkTFMpgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIglCe0mylLDuGp2RjJa9p+fVl2XE8Favr2ojtWdmxPAlree0HO7KjeQJKk4Katio7HuEcbT0S1LKyAxLOuuZCdkCiWXELahuyQxLLT4ygtik7JqFkWcFkGWYAQe2l7KgEkoYEtTXZYYljExTckh2WOGZAwQRNpRuwYHIW/Few4IrsuISxAwuuy45LGGuw4LbsuISBCSYmryhvg4L5xKyEq1ugoFaRHZgwEi/IJIRDknN8AeRLfZKzlUEEZ2THJQwoIXRIzkEpnC8lKOmF8yUtLTsuYbyEBc9+7lVlhyYGJF96PWcaZrG2Jzu86UHypfM5vY9jWTuUHeJ07CCCpj7GtOr7sqOcggoieLGo/8A0mrFtxzIsmHskOHAsnMiONRTlPCx46RLsO+px7KolOJ2Yf8MKOhi27HiDg6QTv8xBgo5ivSs74oAgCSEm2O+pu7JjDsQNLPgWFew79mRHHYB3sOCvPEFdt+IzGD/Agu/5gs5gbJ3KDt0fYQWdjlo8kB28H17Agh+9BfuOMdiNf4IFz4broOnA76kN2QJePIMFXy86uzPLrBdqtVbRMgxc0yjIVuCDCppFe+lhHql2CrqBD0aVk+PnsOA5mwiedIqYo8rb1Kt5WPA3aIo8baDNqOxgPM6Bgrnfkb8/KGLDUdHB+BkR/AN/pIA1o9G8jy5wv1zDCeH8Me8htKea+lJUgfvl+y08y1zxH9vHB2MnmsB9gwg+93qOMxhrUcTtGyRf+ub95GkLHYwq7cSRfOmLr4dtS/0pFUknPvl8vId1VEuVjTgi+ML3D+xig7H5hFEHAMmX/AumUt06PBhNJRJGJF96F+xXbFDRUKGbfhEimEp1IEVDgeMpRPAm+C/t6uxgVMAQyZduw6xkbXYwmtJPUa9gwVzIpbrmViyKDTc4x3BCmLsO+4Odx4u/JXtv+heSL30O/5OHk4PRrIuLNRRdeLed4+ZLXlSbDz3VaLZFhRoSZDPqkS95cWpbg2Y0rZrs91HISu+ZL3lStZuG0bSlb2eOYcFnsuMSB5wR+suXYgF89us3X4oD4EIRJJ1QHXCa+SA7KpFATRg4nVAZaD+aKEFosQ+RLynMCdtJQ+VL6gJ8N3onOyaxsIdrSVon+jDfdOW8nij9uTEzHRs7EVaBXTPD0KMJy8vZbGZastmZyBzZb2P5OW8lnUmLIJOOqtaNOX665f75rBi/gWIpGsOvbkNusfKRoBYcKEZUicIc43/l/fWrrDDBdDpbicSQKWXivibcFNeETiNGc8MEY8g7uTgS2YTpdDTdNJBhSaxhJhLDQONwVaxhNDVhzFzKXfCF+kU0mX5zG3JTw2WRM002mtraO7fhPC91mhXaTaNZ8tn3FdxjYIGNGFETAp8HcbvpkbAVMRtZ9TB7iPE39+83syIcM9no6r/ZV9sex1CVTacBpiOdXo7wFg3gzajXC5nVtdnpKB9FojaGfXOYT9ZJFHTknazTxFSbNUzWmT78/jdZisy2JnmK4Ev8RL26ABsxWYrwR6VJUmSPhROniFRxJWldRL4YSlArniI1FtMptvd6vX1VtoDIp4nTdNSDlmk46DVF7spAyvHCK3as0aeJytQ9IZ8Iazfhutnk5+zGguBYQ4JMqOFa0fW9vuhYQ8KcLI7gv3ADcQkqU0mKddTAH2cw5U/SP/Iegyp+D/QzQEmJ9C9Mx6CKQWZ8QNBQ5wYpbNHY9q8IVegpZIgr+i1LgKueVLp6AFX0V5gACypSmjfiDlP8x8fDSN2a7HISF8h1A1rOWxGukjWVWSzGoIr8VxpYC+qmSqNwCKrIr6FBBHWFJtIHQrUiIqjKvtsFUunFuzkCqVSXX3eIgCnm/kUeYAoOR4JqtmAfTPEMnPnvsQpudQVxxTd1dmpsILdiKS2I3nHyftEqLEy+47xvYFdFGaqOwTGw4us53bSatb2Favvkfnep0TLQa1vUbsE+15Di+eC+NtPxKhaLJuc6M8W76BCoFc/Bm1kBQdW76BDgqPjM16WCcRGEFN/6a8M4dNEhXVeFae7CVwvGR9BpxceKHpezxqyLjphU9HO1Z9xuEk5NviT2cTlrXG5nfcx/Z4Mh+PHSh6CSl+x5s7d4cXkxN+djGlXoVq9gYMmDu4fq8i/aCU0Hv4r1Aaug3pFMALq2xb052LSKirwLDU/b1tGNtmnE+r/weKDbqZuspOk0n63iiVo4qp3C4A7o/m3X/X8My6jbh6p8ciGK+/2GXSjUm61Cze7tyr5ehyAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIggjD/3VNoHXyPE2hAAAAAElFTkSuQmCC');">
+        <div class="inner color-white">
+          <h3 class="flip-box-header"></h3>
+          <p></p>
+          <img src="" alt="" class="flip-box-img">
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="background-image: url('https://s25.postimg.cc/frbd9towf/cta-2.png');">
+        <div class="inner color-white">
+          <h3 class="flip-box-header">Leetcode</h3>
+          <p>Leetcode is a online coding platform</p>
+          <a href="https://www.leetcode.com/" target="_blank">
+          <button class="flip-box-button">Learn More</button>
+        </a>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center" style="background-image: url('data:image/png;base64,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');">
+        <div class="inner color-white">
+          <h3 class="flip-box-header"></h3>
+          <p></p>
+          <!-- <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img"> -->
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="background-image: url('https://s25.postimg.cc/hj4c4qnov/cta-3.png');">
+        <div class="inner color-white">
+          <h3 class="flip-box-header">GeeksforGeeks</h3>
+          <p>A Computer Science Portal for geeks</p>
+          <a href="https://www.geeksforgeeks.org/" target="_blank">
+          <button class="flip-box-button">Learn More</button>
+        </a>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="box-item">
+    <div class="flip-box">
+      <div class="flip-box-front text-center filter-" style="background-image: url('data:image/jpeg;base64,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');">
+        <div class="inner color-white">
+          <h3 class="flip-box-header"></h3>
+          <p></p>
+          <!-- <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img"> -->
+        </div>
+      </div>
+      <div class="flip-box-back text-center" style="background-image: url('https://s25.postimg.cc/l2q9ujy4f/cta-4.png');">
+        <div class="inner color-white">
+          <h3 class="flip-box-header">Hackerrank</h3>
+          <p>HackerRank is the market-leading technical assessment and remote interview solution for hiring developers. Start hiring at the pace of innovation!</p>
+          <a href="https://www.hackerrank.com/" target="_blank">
+          <button class="flip-box-button">Learn More</button>
+        </a>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+  <!-- footer section -->
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2023 All Rights Reserved By
+      <a href="https://html.design/">CarrierHub</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- progreesbar script -->
+
+  </script>
+  <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"2215e1dbb8f44d94dc32030bd0338d907","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
+</body>
+
+</html>

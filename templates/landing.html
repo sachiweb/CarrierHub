@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarrierHub</title>
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+
+
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="{% static 'css-circular-prog-bar.css' %}">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'responsive.css'%}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'chart.scss' %}">
+
+  <script src="{% static 'chart.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css-circular-prog-bar.css' %}">
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+        <header class="header_section">
+            <div class="container">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="app.html">
+                  <img src="{% static 'logo.png' %}" alt="">
+                  <span style="color:blue">
+                    CarrierHub
+                  </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                    <ul class="navbar-nav  ">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="app"> Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="about"> About </a>
+                      </li>
+      
+                      <li class="nav-item ">
+                        <a class="nav-link" href="blog"> Blog </a>
+                      </li>
+      
+                      <!-- <li class="nav-item">
+                        
+                      </li> -->
+      
+                      <li class="nav-item">
+                        <a class="nav-link" href="services">Services</a>
+                      </li>
+                    </ul>
+                    <!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                      <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                    </form> -->
+                  </div>
+              </nav>
+            </div>
+          </header>
+
+
+
+
+
+         <div class="container"> 
+
+        <section class="section-3" id="section-3">
+            <h1 class="section-heading section-3-heading">Choose your Tech Field To Learn</h1>
+            <div class="projects-wrapper center">
+                <div class="project">
+                    <div class="project-text">
+                        <h2 class="project-name">Artificial Intelligence</h2>
+                        <h4 class="project-technologies">ML / DL </h4>
+                    </div>
+                    <img src="{% static 'ml.jpg' %}" class="project-img" />
+                    <a href="mlroad" class="project-link" target="_blank">Explore RoadMap</a>
+
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2 class="project-name">Web Devlopment</h2>
+                        <h4 class="project-technologies">Frontend / Backend</h4>
+                    </div>
+                    <img src="{% static 'project-3.jpg' %}" class="project-img" />
+                    <a href="webroad" class="project-link" target="_blank">Explore RoadMap</a>
+                </div>
+                <div class="project">
+                    <div class="project-text">
+                        <h2 class="project-name">Android</h2>
+                        <h4 class="project-technologies">Java | Android studio</h4>
+                    </div>
+                    <img src="{% static 'app.jpeg' %}" class="project-img" />
+                    <a href="androad" class="project-link" target="_blank">Explore RoadMap</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+        <section class="container-fluid footer_section">
+            <p>
+              Copyright &copy; 2023 All Rights Reserved By
+              <a href="https://html.design/">Net Ninjas</a>
+            </p>
+          </section>
+          <!-- footer section -->
+        
+          <script type="text/javascript" src="{% static 'jquery-3.4.1.min.js' %}"></script>
+          <script type="text/javascript" src="{% static 'bootstrap.js' %}"></script>
+        
+          <script>
+            // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+            // Australia.
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: {
+                  lat: 40.645037,
+                  lng: -73.880224
+                },
+              });
+              var image = 'maps-and-flags.png'
+              var beachMarker = new google.maps.Marker({
+                position: {
+                  lat: 40.645037,
+                  lng: -73.880224
+                },
+                map: map,
+                icon: image
+              });
+            }
+          </script>
+          <!-- google map js -->
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+          </script>
+          <!-- end google map js -->
+          <!-- bot-->
+        
+          <script type="text/javascript">
+            (function(d, m){
+                var kommunicateSettings = 
+                    {"appId":"2215e1dbb8f44d94dc32030bd0338d907","popupWidget":true,"automaticChatOpenOnNavigation":true};
+                var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+                s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+                var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+                window.kommunicate = m; m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
+        /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+        </script>
+
+
+
+
+    
+</body>
+
+</html>

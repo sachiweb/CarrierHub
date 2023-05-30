@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>CarrierHub</title>
+
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="{% static 'css-circular-prog-bar.css' %}">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+
+
+
+  <link rel="stylesheet" href="{% static 'scss-circular-prog-bar.css' %}">
+
+
+</head>
+
+<body>
+  <div class="top_container sub_pages">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'logo.png' %}" alt="">
+            <span>
+              CarrierHub
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="app"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="about"> About </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="blog"> Blog </a>
+                </li>
+
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="vehicle.html"> vehicle </a>
+                </li> -->
+
+                <li class="nav-item">
+                  <a class="nav-link" href="services">Services</a>
+                </li>
+
+              </ul>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+  </div>
+  <!-- end header section -->
+  <!-- about section -->
+  <div class="card mb-4 h-50">
+    <form method="post" action="{% url 'add' %}">
+        {% csrf_token %}                       
+        <div class="card-body" style="margin-left: 400px;margin-right: 300px;">
+
+            <h3>Enter post title:</h3>
+                <label for="text">Enter title:</label>
+                <input type="text" id="text" name="title">
+            
+            <h3>Enter catagory</h3>
+                <label for="cars">Category:</label>
+                <select name="category" id="cars">
+                <option value="0">normal</option>
+                <option value="1">featured</option>
+                </select>
+            
+            <h3>Enter Frame</h3>
+                <label for="cars">Frame here:</label>
+                <select name="fram" id="cars">
+                <option value="0">django</option>
+                <option value="1">flask</option>
+                <option value="2">featured</option>
+                </select>
+            
+            <h3>enter Thumbnail:</h3>
+                <label for="myfile">Select files:</label>
+                <input type="file" id="myfile" name="thumbnail" multiple>
+            
+            <h3>Compose Content:</h3>
+                <textarea id="w3review" name="body" rows="4" cols="50"></textarea>
+              
+            <h3>Post Summary:</h3>
+                <textarea id="w3review" name="summary" rows="4" cols="50"></textarea>
+                  
+            
+            <button type="submit" class="btn btn-primary" style="margin-left: 325px;margin-top: 10px;">add →</button>
+        </div>
+    </form>
+</div>
+
+  <!-- about section -->
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2023 All Rights Reserved By
+      <a href="https://html.design/">CarrierHub</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'bootstrap.js' %}"></script>
+  <!-- progreesbar script -->
+
+  </script>
+  <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"2215e1dbb8f44d94dc32030bd0338d907","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
+</body>
+</html>
+
